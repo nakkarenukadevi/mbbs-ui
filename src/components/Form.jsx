@@ -173,10 +173,10 @@ const Form = () => {
   };
 
   return (
-    <div className="fixed inset-0 flex justify-center items-center bg-gray-50">
+    <div className="min-h-screen flex justify-center items-center bg-gray-50 overflow-auto px-2">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-2xl bg-white rounded-lg shadow p-8"
+        className="max-w-2xl w-full bg-white rounded-lg shadow p-8 mx-auto"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>

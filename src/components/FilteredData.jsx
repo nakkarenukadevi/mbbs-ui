@@ -22,7 +22,7 @@ function FilteredDataTable() {
     // Make actual API call using formData and pagination
     const fetchData = async () => {
       try {
-        const url = `http://localhost:3030/api/students?pageNumber=${page}&pageSize=${pageSize}`;
+        const url = ` https://mbbs-server.onrender.com/api/students?pageNumber=${page}&pageSize=${pageSize}`;
         const res = await fetch(url, {
           method: "POST",
           headers: {
