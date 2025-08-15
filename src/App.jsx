@@ -6,9 +6,9 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen w-full bg-gray-50 flex flex-col items-center">
+    <div className="min-h-screen min-w-screen overflow-auto bg-gray-50 flex flex-col items-center">
       <Header />
-      <div className="w-full flex pt-20 pb-16">
+      <div className="flex pt-20 pb-16">
         <Router>
           <Routes>
             <Route path="/" element={<Form />} />

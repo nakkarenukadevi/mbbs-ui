@@ -73,8 +73,8 @@ function FilteredDataTable() {
 
   return (
     <div className="w-full">
-      <div className="w-full min-h-[60vh] overflow-x-scroll flex items-center justify-center">
-        <div className="max-h-[70vh]">
+      <div className="w-full min-h-[60vh]  overflow-x-scroll flex items-center justify-center">
+        <div className="max-h-[70vh] max-w-[80vw]">
           <table
             className="border-collapse"
             style={{ tableLayout: "auto", width: "100%" }}
