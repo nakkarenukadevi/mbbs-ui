@@ -61,8 +61,10 @@ function FilteredDataTable() {
 
   // Helper to format header names: capitalize and add space before capital letters
   function formatHeader(header) {
-    if (header === "ews") return "EWC";
+    // Special cases for known headers
+    if (header === "ews") return "EWS";
     if (header === "pmc") return "PMC";
+    if (header === "anglo_india") return "Anglo India";
     return header
       .replace(/_/g, " ")
       .replace(/([a-z])([A-Z])/g, "$1 $2")
@@ -71,9 +73,12 @@ function FilteredDataTable() {
 
   return (
     <div className="w-full">
-      <div className="overflow-x-auto" style={{ maxWidth: "100vw" }}>
-        <div style={{ maxHeight: 400, overflowY: "auto", minWidth: 600 }}>
-          <table className="min-w-max w-full border-collapse">
+      <div className="w-full min-h-[60vh] overflow-x-scroll flex items-center justify-center">
+        <div className="max-h-[70vh]">
+          <table
+            className="border-collapse"
+            style={{ tableLayout: "auto", width: "100%" }}
+          >
             <thead className="bg-blue-700 text-white sticky top-0 z-10">
               <tr>
                 <th
@@ -138,7 +143,7 @@ function FilteredDataTable() {
             ))}
           </select>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 ml-auto">
           {renderPagination(page, totalPages, setPage)}
         </div>
       </div>

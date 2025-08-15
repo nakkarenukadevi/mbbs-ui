@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="min-h-screen w-full bg-gray-50 flex flex-col items-center">
       <Header />
-      <div className="w-full max-w-7xl flex-1 pt-20 pb-16">
+      <div className="w-full flex pt-20 pb-16">
         <Router>
           <Routes>
             <Route path="/" element={<Form />} />
