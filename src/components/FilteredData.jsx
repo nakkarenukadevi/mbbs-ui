@@ -79,7 +79,7 @@ function FilteredDataTable() {
             className="border-collapse"
             style={{ tableLayout: "auto", width: "100%" }}
           >
-            <thead className="bg-blue-700 text-white sticky top-0 z-10">
+            <thead className="bg-green-900 text-black sticky top-0 z-10">
               <tr>
                 <th
                   className="px-4 py-2 whitespace-nowrap text-left font-bold"
@@ -184,9 +184,9 @@ function renderPagination(page, totalPages, setPage) {
         style={{
           margin: 2,
           padding: "4px 8px",
-          background: num === page ? "#1976d2" : "#fff",
-          color: num === page ? "#fff" : "#000",
-          border: "1px solid #1976d2",
+          background: num === page ? "#166534" : "#000",
+          color: num === page ? "#bbf7d0" : "#22c55e",
+          border: `1px solid ${num === page ? '#166534' : '#22c55e'}`,
           borderRadius: 4,
           cursor: "pointer",
         }}

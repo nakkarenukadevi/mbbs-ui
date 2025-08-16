@@ -79,7 +79,7 @@ const Form = () => {
       <div className="relative" ref={ref}>
         <label className="block font-medium mb-1">{label}:</label>
         <div
-          className="w-full border rounded px-3 py-2 bg-white cursor-pointer min-h-[42px] flex flex-wrap gap-2 items-center"
+          className="w-full border rounded px-3 py-2 bg-green-900 cursor-pointer min-h-[42px] flex flex-wrap gap-2 items-center"
           onClick={() => setOpen((o) => !o)}
         >
           {selected.length === 0 ? (
@@ -90,7 +90,7 @@ const Form = () => {
             selected.map((item) => (
               <span
                 key={item}
-                className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs flex items-center gap-1"
+                className="bg-green-200 text-green-900 px-2 py-1 rounded text-xs flex items-center gap-1"
                 onClick={(e) => {
                   e.stopPropagation();
                   toggleOption(item);
@@ -134,8 +134,8 @@ const Form = () => {
             {options.map((option) => (
               <div
                 key={option}
-                className={`px-4 py-2 cursor-pointer hover:bg-blue-100 flex items-center gap-2 ${
-                  selected.includes(option) ? "bg-blue-50" : ""
+                className={`px-4 py-2 cursor-pointer hover:bg-green-200 flex items-center gap-2 ${
+                  selected.includes(option) ? "bg-green-100" : ""
                 }`}
                 onMouseDown={(e) => {
                   e.preventDefault();
@@ -146,7 +146,7 @@ const Form = () => {
                   type="checkbox"
                   checked={selected.includes(option)}
                   readOnly
-                  className="accent-blue-600 rounded"
+                  className="accent-green-900 rounded"
                 />
                 <span>{option}</span>
               </div>
@@ -173,7 +173,7 @@ const Form = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-50 overflow-auto px-2">
+    <div className="min-h-screen flex justify-center items-center bg-white overflow-auto px-2">
       <form
         onSubmit={handleSubmit}
         className="max-w-2xl w-full bg-white rounded-lg shadow p-8 mx-auto"
@@ -186,7 +186,7 @@ const Form = () => {
               value={score}
               onChange={handleScoreChange}
               onBlur={handleScoreBlur}
-              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
             {error && (
               <span className="text-red-600 text-sm mt-1 block">{error}</span>
@@ -205,7 +205,7 @@ const Form = () => {
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               <option value="BC-A">BC-A</option>
               <option value="BC-B">BC-B</option>
@@ -232,7 +232,7 @@ const Form = () => {
             <select
               value={muslimMinority}
               onChange={(e) => setMuslimMinority(e.target.value)}
-              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -243,7 +243,7 @@ const Form = () => {
             <select
               value={angloIndian}
               onChange={(e) => setAngloIndian(e.target.value)}
-              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -254,7 +254,7 @@ const Form = () => {
             <select
               value={pmc}
               onChange={(e) => setPmc(e.target.value)}
-              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -265,7 +265,7 @@ const Form = () => {
             <select
               value={ews}
               onChange={(e) => setEws(e.target.value)}
-              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -274,7 +274,7 @@ const Form = () => {
         </div>
         <button
           type="submit"
-          className="w-full mt-8 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-lg shadow-lg transform hover:-translate-y-1 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300"
+          className="w-full mt-8 bg-black hover:bg-green-700 text-black-300 font-bold py-3 px-4 rounded-lg shadow-lg transform hover:-translate-y-1 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-green-900"
         >
           <span className="inline-flex items-center gap-2">
             <svg
