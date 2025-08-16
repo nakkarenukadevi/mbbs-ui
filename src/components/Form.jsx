@@ -272,26 +272,8 @@ const Form = () => {
             </select>
           </div>
         </div>
-        <button
-          type="submit"
-          className="w-full mt-8 bg-black hover:bg-green-700 text-black-300 font-bold py-3 px-4 rounded-lg shadow-lg transform hover:-translate-y-1 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-green-900"
-        >
-          <span className="inline-flex items-center gap-2">
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-            Submit
-          </span>
+        <button type="submit" className="bg-green-900 text-black w-full mt-5">
+          Submit
         </button>
       </form>
     </div>
